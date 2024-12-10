@@ -1,1 +1,3 @@
-Esta página visualiza información y links a páginas de distintos cursos y carreras del rubro informático. 
+Sitio tienda de bicicletas.
+Posee diseño responsivo.
+Sitio creado para práctica pre entrega. Creado por Claudio Abel Contti 2024

@@ -1,67 +1,456 @@
-body {
-    /* width: 100%;
-    height: 100vh; */
+:root{
+    --fuentePrincipal: 'Oswald', sans-serif;
+    --fuenteSecundaria: 'Open Sans', sans-serif;
+    --colorPrincipal: #AE445A;
+    --colorSecundario: #031536;
+    --colorBotonProd: #f07e95;
+    --crema: #FFF8E8;
+    --blanco: #ffffff;
+}
+
+h1, h2, h3, p, body{
     margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
-    font-family: Tahoma;
-    font-size: 16px;
 }
 
-h1, h2, p{
-    margin: 1em  auto;
-    text-align: center; 
+h1, h2, h3{
+    font-family: var(--fuentePrincipal);
 }
 
-ul{
-   list-style-type: none;
-   text-align: center;
-   padding: 0;
+button{
+    font-family: var(--fuenteSecundaria);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header y navegación */
+
+/* Pantallas menores a 768px */
+
+header{
+    display: grid;
+    padding: 20px;
+    row-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 14px;
 }
 
 li{
-    display: inline-block; 
-    margin-right: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 10px; 
+}
+
+li:hover{
+    color: var(--colorPrincipal);
+}
+
+/* Pantallas de 768px en adelante */
+
+@media only screen and (min-width: 768px) {
+    header{
+        grid-template-columns: 1fr 3fr 1fr;
+        font-size: 16px;
+    }
+
+    li{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+/* Pantallas de 1024px en adelante */
+
+@media only screen and (min-width: 1024px) {
+    header{
+        font-size: 18px;
+    }
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+ 
+#barra{
+    height: 30px;
+    background-color: var(--colorPrincipal);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra_busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.barra_busqueda input{
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    min-width: 180px;
+}
+
+#logo{
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: 32px;
+}
+
+#logo:hover{
+    color: var(--colorPrincipal);
+}
+
+.icono{
+    color: var(--blanco);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icono:hover{
+    color: var(--colorPrincipal);
+}
+
+#numero_carrito{
+    font-size: 10px;
+    margin: 0;
+    margin-left: -5px;
+    display: inline-block;
+    transform: translate(0, 5px);
+}
+
+/* Seccion productos */
+
+section, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    font-family: var(--fuenteSecundaria);
+}
+
+#titulo_bicis{
+    text-transform: uppercase;
+}
+
+.productos{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Pantallas menores a 768px */
+
+.producto{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 240px;
+    height: 240px;
+    min-width: 240px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 7px 5px rgba(0, 0, 0, 0.2);
+    transform: translate(0, -5px);
+}
+
+.desc_producto p{
+    font-size: 12px;
+}
+
+.desc_producto h3{
+    font-size: 13px;
+}
+
+.desc_producto p, .desc_producto h3{
+    margin-bottom: 8px;
+}
+
+.desc_producto button{
+    width: 40%;
+    height: 28px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--colorBotonProd);
+    color: var(--blanco);
+}
+
+.desc_producto button:hover{
+    background-color: var(--colorPrincipal);
+}
+
+/* Pantallas de 768px en adelante */
+
+@media only screen and (min-width: 768px) {
+    .producto{
+        width: 260px;
+        height: 260px;
+    }
+
+    .desc_producto button{
+        height: 30px;
+    }
+
+    .desc_producto p, .desc_producto h3{
+        margin-bottom: 10px;
+    }
+}
+
+/* Pantallas de 1024px en adelante */
+
+@media only screen and (min-width: 1024px) {
+    .producto{
+        width: 280px;
+        height: 280px;
+    }
+
+    .desc_producto p{
+        font-size: 14px;
+    }
+
+    .desc_producto h3{
+        font-size: 15px;
+    }
+
+    .desc_producto button{
+        height: 32px;
+    }
+}
+
+.producto img{
+    height: 60%;
+}
+
+/* Sección nosotros y reseñas */
+
+.seccion_nosotros{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.seccion_nosotros p{
+    margin-top: 15px;
+    min-width: 250px;
+    font-size: 16px;
     text-align: center;
 }
 
-form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 2em;
+.reseñas{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    width: 60%;
+    min-width: 200px;
+    padding: 10px 0;
 }
 
-label {
-    display: block;
-    margin: 0.5em 0;
+.reseña{
+    text-align: center;
+}
+
+.reseña p{
+    font-size: 14px;
+}
+
+/* Pantallas de 768px en adelante */
+
+@media only screen and (min-width: 768px) {
+    .seccion_nosotros p{
+        font-size: 18px;
+    }
+
+    .reseña p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .reseñas{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .reseñas{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Seccion contacto */
+
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
 }
 
 input, textarea{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario{
+    display: grid;
+    padding-top: 20px;
+    gap: 15px;
+}
+
+.formulario label{
+    display: inline-block;
     width: 100%;
-    margin: 10px 0 0 0;
-    min-height: 2em;
 }
 
-fieldset{
-    padding: 2em 0;
-    border: none;
+.formulario input, .formulario textarea{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
 }
 
-section{
-    padding: 0 2em;
-    margin: 3em 0;
+form button{
+    margin: 10px auto;
+    width: 45%;
+    height: 30px;
+    /* font-family: var(--fuenteSecundaria); */
+    font-weight: bold;
+    cursor: pointer;
 }
 
-input[type="submit"] {
-    display: block;
+input{
+    height: 30px;
+}
+
+#parrafo_contacto{
+    margin-top: 15px;
+    width: 70%;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Pantallas de 768px en adelante */
+
+@media only screen and (min-width: 768px) {
+    #parrafo_contacto{
+        font-size: 18px;
+    }
+    
+    #formulario{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #form_mensaje{
+        grid-column: 1/3;
+    }
+}
+
+
+/* Footer */
+
+footer{
+    margin-top: 20px;
+    background-color: var(--colorSecundario);
+    font-family: var(--fuenteSecundaria);
+    color: var(--blanco);
+}
+
+.contenido_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Pantallas de 768px en adelante */
+
+@media only screen and (min-width: 768px) {
+    .contenido_footer{
+       flex-direction: row;
+    }
+}
+
+.contenido_footer h3{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer>p:last-child{
     width: 60%;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: #3b3b4f;
-    border-color: white;
-    min-width: 300px;
+    text-align: center;
 }
 
+.iconos_footer img{
+    margin: 20px 5px 10px 5px;
+}
+
+/* Estilos para página carrito */
+
+.carrito{
+    min-height: 65vh;
+    width: 35%;
+    padding: 30px 0;
+    margin: 20px auto;
+    min-width: 600px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#parrafo_sin_prods, #parrafo_total{
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.detalle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.detalle p{
+    margin: 0;
+    min-width: 120px;
+}
+
+.prod_carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 150px;
+}
+
+.prod_carrito img{
+    height: 60px;
+}
+
+.botones{
+    min-width: 80px;
+}

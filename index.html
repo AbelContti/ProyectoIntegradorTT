@@ -4,67 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talento Tech</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/pngimg.com - book_PNG51088.ico">
+
+    <link rel="icon" type="image/x-icon" href="/imgs/iconos/icono_bici.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div id="barra"></div>
+    
     <header>
+        <a href="index.html">
+            <h1 id="logo">TODO BICIS</h1>
+        </a>
+
         <nav>
-            <h1>Bienvenido a todocurso.com</h1>
+            <div class="barra_busqueda">
+                <input type="text" placeholder="Ingresa un producto..." >
+                <span class="material-symbols-outlined icono">search</span>
+            </div>
             
-            <ul>
-                <li class="inline">Cursos</li>
-                <li class="inline">Carreras</li>
-                <li class="inline">Sobre nosotros</li>
-                <li class="inline">Contacto</li>
+            <ul class="menu">
+                <li>Urbanas</li>
+                <li>Ruta</li>
+                <li>Mtb</li>
+                <li>Deportivas</li>
+                <li>Eléctricas</li>
+                <li>Sobre nosotros</li>
+                <li>Contacto</li>
             </ul>
         </nav>
+        
+        <div>
+            <span class="material-symbols-outlined iconos_usuario icono">home</span>
+            <a href="pagina_carrito.html">
+                <span class="material-symbols-outlined iconos_usuario icono">shopping_bag<p id="numero_carrito">0</p></span>
+            </a>
+            <span class="material-symbols-outlined iconos_usuario icono">person</span>
+        </div>
     </header>
-    
+
     <main>
         <section>
-           <h2>Sobre Nosotros</h2>
+            <h2 id="titulo_bicis">Nuestras bicicletas</h2>
+            <div class="productos"></div>
+        </section>
+
+        <section class="seccion_nosotros">
+            <h2>Sobre Nosotros</h2>
             
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti corporis ducimus eius, consectetur exercitationem ipsa possimus placeat dignissimos perferendis ea. Animi eius reiciendis consequuntur sit exercitationem harum at architecto officia!
             Mollitia rem cumque accusamus quaerat repellendus, sunt, sequi corrupti quae modi sapiente cupiditate amet debitis eveniet voluptas quia illum. Excepturi voluptate dolor, doloribus illo repellendus consectetur impedit minima debitis ea?
-            Atque, veniam! Labore magni tempora, itaque quisquam quibusdam hic eos iure natus praesentium? Dolor perferendis sunt debitis quae eos quia minima eligendi. Est vitae hic officia quam aliquid accusamus facere.
-            Iure itaque facilis deleniti molestiae asperiores! Possimus nemo reprehenderit exercitationem quia necessitatibus, non pariatur ipsum dolores accusamus, mollitia nesciunt! Quis voluptatem quod iusto, odio consequatur non voluptas ex fuga est!
-            Velit natus modi alias necessitatibus, excepturi expedita eius explicabo ullam pariatur dicta inventore ad quis nostrum nam perferendis ut odio, veniam illo consequuntur veritatis qui dolor sequi fugit totam! Esse!
-            Fugit mollitia dicta vero, facere deleniti est culpa esse quia adipisci nulla consequuntur quis architecto sed magni sapiente eum aliquid, odit omnis cupiditate. Harum porro, enim magnam unde quidem vitae!
-            Unde ducimus, voluptate est nemo asperiores aliquid aliquam vero odio, laudantium expedita dolor molestiae deleniti ipsa commodi a, cupiditate maxime. Hic laborum repellat ipsum beatae! Corporis cum hic tempore obcaecati.
-            Numquam voluptatum neque quas blanditiis nobis ducimus eos, assumenda quia eius, quisquam sequi ab eligendi, earum quod tenetur. Modi aut nihil officia soluta culpa libero at est nulla neque necessitatibus!
-            Laboriosam non tenetur quaerat minus nesciunt ex ea earum qui, omnis placeat eligendi at inventore rem voluptate aliquam facere nemo ipsum itaque consequuntur recusandae sapiente possimus. At illo ea porro.
-            Aspernatur veritatis quidem incidunt omnis, possimus temporibus quisquam. Quod libero saepe, consequuntur asperiores recusandae ullam quae nulla hic doloremque deleniti fugit beatae culpa ad sunt possimus dignissimos vitae quos non?
-            Assumenda est provident nemo porro. Placeat laborum qui corrupti, alias perferendis error sint architecto, culpa consequatur aspernatur ratione beatae soluta fuga natus voluptas eos perspiciatis? Deserunt dolor magnam voluptatem voluptates?
-            In non enim veniam odio, eligendi unde velit expedita itaque autem? Similique odit veniam consequuntur, modi architecto officiis aut perspiciatis? Repellendus quasi corporis suscipit maiores iste fugiat ullam deserunt at?
-            Nostrum similique tenetur magnam exercitationem deserunt esse, nulla enim quod dicta perspiciatis et sequi minus unde eum, dolore veritatis eligendi expedita quas explicabo? Sint laboriosam quis numquam doloremque quae repellendus.
-            Reiciendis unde eos harum nemo, temporibus culpa, velit cupiditate consequatur omnis doloribus quam itaque accusamus vero sunt perferendis! A odio voluptatibus odit deserunt? Soluta quos sit numquam dignissimos! Ea, dignissimos?
-            Commodi officiis eveniet placeat odio, magnam fuga id incidunt neque fugit quibusdam voluptatibus reprehenderit exercitationem numquam quisquam provident voluptatum molestiae odit, vitae consequuntur, veniam eum labore totam! At, sapiente repellendus!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti corporis ducimus eius, consectetur exercitationem ipsa possimus placeat dignissimos perferendis ea. Animi eius reiciendis consequuntur sit exercitationem harum at architecto officia!
             </p>    
         </section>
-        
+
+        <section>
+            <h2>Reseñas de clientes</h2> 
+            
+            <div class="reseñas">
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+
+                <div class="reseña">
+                    <h3>Nombre</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad placeat repudiandae iure modi, provident recusandae perferendis.  et, sunt quis</p>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2>Contacto</h2>
-
-            <p>Complete los siguientes campos para realizar un contacto.</p>
-
+            <p id="parrafo_contacto">Complete los siguientes campos para realizar un contacto.</p>
+            
             <form action="https://formspree.io/f/movqagqd" method="post">
-                <fieldset>
-                    <label for="">Nombre: <input name="nombre" type="text" required> </label>
-                    <label for="">Correo: <input name="email" type="email" required> </label>
-                    <label for="">Mensaje: <textarea name="mensaje" rows="3" cols="30" required placeholder="Escriba su mensaje aquí..."></textarea></label>
-                </fieldset>
+                <div class="formulario">
+                    <div>
+                        <label for="inp_nombre">Nombre: </label>
+                        <input id="inp_nombre" type="text" name="nombre" required placeholder="Nombre">
+                    </div>
                 
-                <input type="submit" value="Enviar">
-            </form>
+                    <div>
+                        <label for="inp_email">Correo: </label>
+                        <input id="inp_email" type="email" name="email" required placeholder="Email"> 
+                    </div>
 
+                    <div id="form_mensaje">
+                        <label for="txta_mensaje">Mensaje: </label>
+                        <textarea id="txta_mensaje" rows="3" cols="30" name="mensaje" required placeholder="Escriba su mensaje aquí..."></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-    
+
     </main>
 
-
     <footer>
-        <p>Sitio creado con fines informátivos y educativos. Derechos reservados Abel Contti 2024.</p>
+        <div class="contenido_footer">
+            <div>
+                <h3>sucursal web</h3>
+                <p>Compra teléfonica</p>
+                <p>¡Asesoramiento personalizado!</p>
+                <p>+54 9 11 2502-6198</p>
+            </div>
+            
+            <div>
+                <h3>sucursal local</h3>
+                <p>Av. Gral. Miguel de Azcuénaga 633</p>
+                <p>Morón, Buenos Aires</p>
+                <p>Lunes a Viernes 14 a 18hs.</p>
+            </div>
+    
+            <div>
+                <h3>info</h3>
+                <p>Políticas de cambios y devoluciones</p>
+                <p>Preguntas frecuentes</p>
+                <p>Términos y condiciones</p>
+            </div>
+        </div>
+
+        <div class="iconos_footer">
+            <img src="/imgs/iconos/whatsapp.png" alt="icono whatsapp">
+            <img src="/imgs/iconos/instagram.png" alt="icono instagram">
+            <img src="/imgs/iconos/facebook.png" alt="icono facebook">
+        </div>
+
+        <p>Sitio creado para práctica pre entrega. Creado por Claudio Abel Contti 2024</p>
     </footer>
+    
+    <script src="/js/index.js"></script>
+    <script src="/js/productos.js"></script>
 </body>
 </html>
