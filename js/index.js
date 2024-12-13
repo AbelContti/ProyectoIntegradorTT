@@ -50,6 +50,7 @@ function validarFormulario(event){
     }
     else{
         // Si hubo 1 o más errores se muestra información sobre el/los error/es en la página index.html (en la sección de contacto)
+        pErrores.setAttribute("style", "color: red");
         pErrores.innerText = errores;
     }
 }
