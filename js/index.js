@@ -44,8 +44,8 @@ function validarFormulario(event){
     // Si no hubo errores se procede a hacer el envio del formulario
     if(cantidadErrores === 0){
         // Se muestra un mensaje en la página index.html indicando que hubo éxito en la validación del formulario
-        pErrores.textContent = "Se ha validado el formulario correctamente!!!";
         pErrores.setAttribute("style", "color: green");
+        pErrores.textContent = "Se ha validado el formulario correctamente!!!";
         event.target.submit();
     }
     else{
