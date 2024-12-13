@@ -10,6 +10,7 @@ const productos = [
 function crearProductos(productos){
     let divProductos = document.querySelector(".productos");
     
+    // Se agregan al divProductos, de la página index, cada producto generado a partir del array productos
     for(let producto of productos) {
         let divProducto = document.createElement("div");
         divProducto.className = "producto";
@@ -24,7 +25,10 @@ function crearProductos(productos){
             </div>
         `;
 
+        // Se agrega evento al bóton agregar del producto
         divProducto.querySelector("button").addEventListener("click", () => agregarProducto(producto));
+
+        // Se agrega divProducto generado al div divProductos que se encuentra en index.html
         divProductos.appendChild(divProducto);
     }
 }
@@ -33,7 +37,7 @@ function agregarProducto(producto){
     // Obtiene de localStorage el elemento carrito, sino existe crea un array vacio
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     
-    // Obtiene de localStorage el elemento cantidadProductos, sino existe crea una variable con valor 0
+    // Obtiene de localStorage el elemento cantidadProductos (cantidad total de productos en carrito), sino existe crea una variable con valor 0
     let cantidadProductos = Number(localStorage.getItem("cantidadProductos")) || 0;
     
     // Verifico si el nuevo producto se encuentra en el carrito
@@ -47,13 +51,12 @@ function agregarProducto(producto){
         producto.cantidad = 1;
     }
     
-    // Guarda en localStorage el contenido del array carrito
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    
     // Suma la variable cantidadProductos y lo guarda en localStorage
+    // Guarda en localStorage el contenido del array carrito
     cantidadProductos++;
-    localStorage.setItem("cantidadProductos", JSON.stringify(cantidadProductos));
-
+    actualizarLocalStorage(carrito, cantidadProductos);
+    
+    // Actualiza el contador de productos que se visualiza en la parte del header de la página
     actualizarCarrito();
 }
 

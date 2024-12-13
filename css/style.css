@@ -356,12 +356,17 @@ form button{
     cursor: pointer;
 }
 
-
 #parrafo_contacto{
     margin-top: 15px;
     width: 70%;
     text-align: center;
     font-size: 16px;
+}
+
+#errores{
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
 }
 
 /* Pantallas de 768px en adelante */
@@ -445,7 +450,7 @@ footer>p:last-child{
 .carrito{
     min-height: 65vh;
     width: 320px;
-    padding: 40px 0;
+    padding: 40px 20px;
     margin: 20px auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
@@ -454,13 +459,14 @@ footer>p:last-child{
 
 @media only screen and (min-width: 768px) {
     .carrito{
-        width: 520px;
+        width: 550px;
     }
 }
 
 #parrafo_sin_prods, #parrafo_total{
     padding-top: 20px;
     font-size: 24px;
+    text-align: center;
 }
 
 .detalle{
@@ -505,7 +511,7 @@ footer>p:last-child{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .prod_carrito img{

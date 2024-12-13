@@ -6,10 +6,7 @@
     <title>Talento Tech</title>
 
     <link rel="icon" type="image/x-icon" href="/imgs/iconos/icono_bici.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -103,21 +100,23 @@
             <h2>Contacto</h2>
             <p id="parrafo_contacto">Complete los siguientes campos para realizar un contacto.</p>
             
-            <form action="https://formspree.io/f/movqagqd" method="post">
+            <p id="errores"></p>
+            
+            <form action="https://formspree.io/f/movqagqd" method="post" onsubmit="validarFormulario(event)">
                 <div class="formulario">
                     <div>
                         <label for="inp_nombre">Nombre: </label>
-                        <input id="inp_nombre" type="text" name="nombre" required placeholder="Nombre">
+                        <input id="inp_nombre" type="text" name="nombre" placeholder="Nombre">
                     </div>
                 
                     <div>
                         <label for="inp_email">Correo: </label>
-                        <input id="inp_email" type="email" name="email" required placeholder="Email"> 
+                        <input id="inp_email" type="text" name="email" placeholder="Email"> 
                     </div>
 
                     <div id="form_mensaje">
                         <label for="txta_mensaje">Mensaje: </label>
-                        <textarea id="txta_mensaje" rows="3" cols="30" name="mensaje" required placeholder="Escriba su mensaje aquí..."></textarea>
+                        <textarea id="txta_mensaje" rows="3" cols="30" name="mensaje" placeholder="Escriba su mensaje aquí..."></textarea>
                     </div>
                 </div>
                 
